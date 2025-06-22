@@ -27,7 +27,6 @@ public class LogicScript : MonoBehaviour
             Debug.Log("Target Score Reached: " + playerScore);
             Time.timeScale = 0;
             winScreen.SetActive(true);
-            
         }
     }
 
@@ -36,12 +35,14 @@ public class LogicScript : MonoBehaviour
         playerScore = 0;
         scoreText.text = "Score: " + playerScore.ToString();
         Debug.Log("Game Restarted");
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
     public void returnToMainMenu()
     {
         Debug.Log("Returning to Main Menu");
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
@@ -55,6 +56,7 @@ public class LogicScript : MonoBehaviour
     public void nextLevel()
     {
         Debug.Log("Going to Next Level");
+        Time.timeScale = 1;
         SceneManager.LoadScene(2); //TODO: Change to route to the next level
     }
 }

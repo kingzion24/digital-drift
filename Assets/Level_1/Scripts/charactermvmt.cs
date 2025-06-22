@@ -17,6 +17,14 @@ public class charactermvmt : MonoBehaviour
     void Move()
     {
         float moveInput = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right Arrow
+        if(moveInput < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if(moveInput > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
 
