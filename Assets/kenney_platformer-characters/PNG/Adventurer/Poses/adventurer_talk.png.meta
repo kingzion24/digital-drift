@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      adventurer_talk_0: 6505284718279550171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

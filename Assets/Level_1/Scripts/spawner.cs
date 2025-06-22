@@ -7,21 +7,14 @@ public class PlatformSpawner : MonoBehaviour
     public float spawnYOffset = 1f;       // How far above the screen the object spawns
     public float xPadding = 1f;         // Padding so objects don't spawn at the exact edge
 
-    private float topOfScreenY;
-    private float leftOfScreenX;
-    private float rightOfScreenX;
-    private float platformwidth;
+    public float topOfScreenY = 7f;
+    public float leftEdgeX = -7.72f;
+    public float rightEdgeX = 8.2f;
 
     void Start()
     {
-        // Get screen boundaries in world units
-        Vector3 topLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0));
-        Vector3 topRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-
-        platformwidth = platformPrefab.transform.localScale.x / 2f;
-        topOfScreenY = topLeft.y;
-        leftOfScreenX = topLeft.x + xPadding + platformwidth;
-        rightOfScreenX = topRight.x - xPadding - platformwidth;
+        leftEdgeX = leftEdgeX + xPadding;
+        rightEdgeX = rightEdgeX - xPadding;
 
         // Start spawning
         InvokeRepeating(nameof(SpawnPlatform), 1f, spawnInterval);
@@ -29,7 +22,7 @@ public class PlatformSpawner : MonoBehaviour
 
     void SpawnPlatform()
     {
-        float randomX = Random.Range(leftOfScreenX, rightOfScreenX);
+        float randomX = Random.Range(leftEdgeX, rightEdgeX);
         float spawnY = topOfScreenY + spawnYOffset;
         Vector3 spawnPosition = new Vector3(randomX, spawnY, -4f);
 

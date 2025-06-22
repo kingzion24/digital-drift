@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ce425611462cb1f49af894bf1dc859c7
+guid: 9c7c38ccfbbba5540a4fd198d4daffd2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2655090285565928801
-    second: Digital Grid Vertical Background _ Premium Photo_0
+      213: 607181020571667815
+    second: d53a912d2147f5919f09c33e4992a9af 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Digital Grid Vertical Background _ Premium Photo_0
+      name: d53a912d2147f5919f09c33e4992a9af 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 626
-        height: 352
+        width: 736
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1656fb52c86c8d420800000000000000
-      internalID: 2655090285565928801
+      spriteID: 76d8885dbe32d6800800000000000000
+      internalID: 607181020571667815
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      d53a912d2147f5919f09c33e4992a9af 1_0: 607181020571667815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

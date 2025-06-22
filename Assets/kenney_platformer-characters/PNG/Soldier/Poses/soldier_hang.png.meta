@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      soldier_hang_0: 8531666698320102797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

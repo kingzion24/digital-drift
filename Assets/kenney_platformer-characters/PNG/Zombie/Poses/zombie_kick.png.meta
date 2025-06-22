@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_kick_0: 8765855451971945403
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

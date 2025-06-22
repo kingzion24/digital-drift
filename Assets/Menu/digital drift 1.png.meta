@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      digital drift 1_0: 8101602174873582646
+      digital drift 1_1: -7335441907995571702
+      digital drift 1_2: -4508965544723834486
+      digital drift 1_3: -8986839568076875721
+      digital drift 1_4: 3091827476963515028
+      digital drift 1_5: -7301286983046380518
+      digital drift 1_6: 1663136672803123095
+      digital drift 1_7: 5230281500013724606
+      digital drift 1_8: 1698716999992888524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

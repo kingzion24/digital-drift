@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      female_duck_0: -7232540781120324174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

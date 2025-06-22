@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_cheer1_0: -7956388373490771065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

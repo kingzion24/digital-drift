@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      adventurer_hurt_0: 422291870867889888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

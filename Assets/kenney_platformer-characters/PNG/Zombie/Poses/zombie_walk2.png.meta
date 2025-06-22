@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_walk2_0: -8129344513142231057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

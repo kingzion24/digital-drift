@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d9b596854113ed449bec5cc64e57382c
+guid: ce425611462cb1f49af894bf1dc859c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -863688340458207015
-    second: 3d-rendering-big-red-coronavirus-cell-left-with-black-background_0
+      213: 2655090285565928801
+    second: Digital Grid Vertical Background _ Premium Photo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3d-rendering-big-red-coronavirus-cell-left-with-black-background_0
+      name: Digital Grid Vertical Background _ Premium Photo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 7680
-        height: 4320
+        width: 626
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d88756c7009304f0800000000000000
-      internalID: -863688340458207015
+      spriteID: 1656fb52c86c8d420800000000000000
+      internalID: 2655090285565928801
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Digital Grid Vertical Background _ Premium Photo_0: 2655090285565928801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

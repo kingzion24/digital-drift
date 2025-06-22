@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 778726989ec655144871fb8ad4b40e7c
+guid: 288808fb4c457a9429ef5a1343cca080
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6558718043818641697
-    second: sci-fi matrix GIF(1)_0
+      213: -8789972010275612242
+    second: freepik__the-style-is-candid-image-photography-with-natural__28719_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sci-fi matrix GIF(1)_0
+      name: freepik__the-style-is-candid-image-photography-with-natural__28719_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 245
-        height: 115
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd6be3050b0caf4a0800000000000000
-      internalID: -6558718043818641697
+      spriteID: ea955e5270fb30680800000000000000
+      internalID: -8789972010275612242
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      freepik__the-style-is-candid-image-photography-with-natural__28719_0: -8789972010275612242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

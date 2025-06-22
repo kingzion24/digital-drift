@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_climb2_0: 5067987062546450178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      soldier_climb2_0: -5708436396555552614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

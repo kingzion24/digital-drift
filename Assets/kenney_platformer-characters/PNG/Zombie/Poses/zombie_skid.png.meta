@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_skid_0: -6867244064221997882
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

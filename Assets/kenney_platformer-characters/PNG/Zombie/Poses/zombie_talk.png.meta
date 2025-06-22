@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_talk_0: 3876905471984278316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

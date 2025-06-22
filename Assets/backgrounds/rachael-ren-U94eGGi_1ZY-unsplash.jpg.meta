@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 288808fb4c457a9429ef5a1343cca080
+guid: 823b9907d93328646911c90aa9c9715c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8789972010275612242
-    second: freepik__the-style-is-candid-image-photography-with-natural__28719_0
+      213: -1920216019328997367
+    second: rachael-ren-U94eGGi_1ZY-unsplash_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: freepik__the-style-is-candid-image-photography-with-natural__28719_0
+      name: rachael-ren-U94eGGi_1ZY-unsplash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 4032
+        height: 3024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea955e5270fb30680800000000000000
-      internalID: -8789972010275612242
+      spriteID: 90861e344b50a55e0800000000000000
+      internalID: -1920216019328997367
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rachael-ren-U94eGGi_1ZY-unsplash_0: -1920216019328997367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

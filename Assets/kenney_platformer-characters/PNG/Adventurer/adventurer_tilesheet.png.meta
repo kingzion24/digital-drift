@@ -722,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      adventurer_tilesheet_0: -6462463899704803905
+      adventurer_tilesheet_1: -8590976481669380332
+      adventurer_tilesheet_10: 1001301222986705036
+      adventurer_tilesheet_11: -1841225932489551513
+      adventurer_tilesheet_12: -1523285506678874841
+      adventurer_tilesheet_13: 7249699506359464104
+      adventurer_tilesheet_14: -570715385189127946
+      adventurer_tilesheet_15: -4306443754177809112
+      adventurer_tilesheet_16: 6378335770787469680
+      adventurer_tilesheet_17: 4232611329210233670
+      adventurer_tilesheet_18: -1710002825492354170
+      adventurer_tilesheet_19: 8317801871242635033
+      adventurer_tilesheet_2: -3375247832252135793
+      adventurer_tilesheet_20: -8222026490331427040
+      adventurer_tilesheet_21: -7354724885185265547
+      adventurer_tilesheet_22: -5122802998869073453
+      adventurer_tilesheet_23: 8611971804043044337
+      adventurer_tilesheet_3: 1856765991441055078
+      adventurer_tilesheet_4: -1710570205710794173
+      adventurer_tilesheet_5: 2192980651034332916
+      adventurer_tilesheet_6: -834432536249381729
+      adventurer_tilesheet_7: 7818894875247773144
+      adventurer_tilesheet_8: -3106394494962447670
+      adventurer_tilesheet_9: -6281415185655939513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

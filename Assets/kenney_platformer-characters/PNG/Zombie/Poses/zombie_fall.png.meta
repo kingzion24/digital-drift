@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_fall_0: -5036953518886136083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      female_swim1_0: 221308119821319645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

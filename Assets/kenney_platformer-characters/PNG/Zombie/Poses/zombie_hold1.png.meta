@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_hold1_0: -4836816617929069094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

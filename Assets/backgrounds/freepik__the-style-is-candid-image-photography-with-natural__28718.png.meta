@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2a3834e810b387247bbd04861337e636
+guid: 2cdbeeff7bdaa594796bfd61f94c4c35
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2194594039066034820
-    second: wall platforms_0
+      213: -5398209074056103234
+    second: freepik__the-style-is-candid-image-photography-with-natural__28718_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall platforms_0
+      name: freepik__the-style-is-candid-image-photography-with-natural__28718_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 41
-        width: 582
-        height: 290
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48288bca6a3c47e10800000000000000
-      internalID: 2194594039066034820
+      spriteID: eba7895b275b515b0800000000000000
+      internalID: -5398209074056103234
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      freepik__the-style-is-candid-image-photography-with-natural__28718_0: -5398209074056103234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

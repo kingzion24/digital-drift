@@ -1,12 +1,10 @@
 fileFormatVersion: 2
-guid: 3cb41e971915b5a4c900fb0d61a53ffa
+guid: 2a3834e810b387247bbd04861337e636
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3984202055587413259
-    second: Download premium psd _ image of Motherboard circuit technology background
-      psd in gradient green about backgrounds, background design, green background,
-      technology background, and design 3354105_0
+      213: 2194594039066034820
+    second: wall platforms_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,15 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Download premium psd _ image of Motherboard circuit technology background
-        psd in gradient green about backgrounds, background design, green background,
-        technology background, and design 3354105_0
+      name: wall platforms_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1042
-        height: 736
+        x: 42
+        y: 41
+        width: 582
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f2c453f65545b8c0800000000000000
-      internalID: -3984202055587413259
+      spriteID: 48288bca6a3c47e10800000000000000
+      internalID: 2194594039066034820
       vertices: []
       indices: 
       edges: []
@@ -151,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wall platforms_0: 2194594039066034820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
