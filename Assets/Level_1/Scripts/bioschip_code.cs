@@ -17,15 +17,14 @@ public class FallingPiece : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Piece touched");
         if (other.CompareTag("Player"))
         {
             logic.addScore(1); // Add score when touching the player
             Destroy(gameObject);
         }
-        //else if (other.CompareTag("Wall"))
-        //{
-        //    Destroy(this.gameObject); // Or play a fail effect
-        //}
+        else if (other.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -10,9 +10,13 @@ public class FallingObject : MonoBehaviour
     private Camera targetCamera;
     private float screenBottomEdge;
     private bool isInitialized = false;
-    
+    public LogicScript logic;
+
+
     void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        
         // If no camera is set, use the main camera
         if (targetCamera == null)
             targetCamera = Camera.main;
@@ -57,6 +61,13 @@ public class FallingObject : MonoBehaviour
         // Add destruction effects here (particles, sound, etc.)
         Destroy(gameObject);
     }
-    
-    
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            logic.gameOver(); // Trigger game over logic when hitting a wall
+        }
+    }
+
 }

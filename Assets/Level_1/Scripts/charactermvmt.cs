@@ -3,26 +3,15 @@ using UnityEngine;
 public class charactermvmt : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 10f;
-    private Rigidbody2D rb;
-
-    private bool isGrounded;
-    private bool hasFlown;
-
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    public Rigidbody2D rb;
+    public bool isAlive = true;
 
     void Update()
     {
-        Move();
-        CheckGrounded();
-        Fly();
+        if (isAlive)
+        { 
+            Move();
+        }
     }
 
     void Move()
@@ -31,29 +20,10 @@ public class charactermvmt : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
 
-    void Fly()
+    public void Die()
     {
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
-        {
-            if (isGrounded || !hasFlown)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-
-                if (!isGrounded)
-                {
-                    hasFlown = true;
-                }
-            }
-        }
-    }
-
-    void CheckGrounded()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        if (isGrounded)
-        {
-            hasFlown = false; // Reset fly when grounded
-        }
+        isAlive = false;
+        rb.linearVelocity = Vector2.zero; // Stop movement
+        Debug.Log("Player has died");
     }
 }

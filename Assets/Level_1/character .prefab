@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4776922393636042892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.06, y: 4.12}
+  m_Size: {x: 3.14, y: 4.12}
   m_EdgeRadius: 0
 --- !u!114 &6306830986864099586
 MonoBehaviour:
@@ -176,9 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 7
-  groundCheck: {fileID: 0}
-  groundCheckRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  rb: {fileID: 1854031055947546443}
+  logic: {fileID: 0}
