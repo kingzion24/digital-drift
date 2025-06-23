@@ -3,14 +3,35 @@ using UnityEngine;
 public class charactermvmt : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float jumpForce = 5f;
     public Rigidbody2D rb;
     public bool isAlive = true;
+    public bool canFly = false;
+    public bool canJump = true;
+    public bool canMove = true;
+
+    public Transform groundCheck;
+    public float checkRadius = 0.2f;
+    public LayerMask groundLayer;
+
+    private bool isGrounded;
 
     void Update()
     {
         if (isAlive)
-        { 
-            Move();
+        {
+
+            if (canMove) { 
+                Move(); 
+            }
+            if (canFly)
+            {
+                Fly();
+            }
+            else if (canJump)
+            {
+                Jump();
+            }
         }
     }
 
@@ -26,6 +47,24 @@ public class charactermvmt : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = false;
         }
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+    }
+
+    void Fly()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            rb.linearVelocity = Vector2.up * jumpForce;
+        }
+    }
+
+    void Jump()
+    {
+        // Check if the player is touching the ground
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        if (isGrounded)
+        {
+            Fly();
+        }
     }
 
     public void Die()

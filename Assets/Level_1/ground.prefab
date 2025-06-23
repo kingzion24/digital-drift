@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4780042842335626982}
   - component: {fileID: 1110107205354290794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 5268470197362501596}
   - component: {fileID: 8519524390637159212}
   - component: {fileID: 6694383093164363123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Download premium psd _ image of Motherboard circuit technology background
     psd in gradient green about backgrounds, background design, green background,
     technology background, and design 3354105_0
