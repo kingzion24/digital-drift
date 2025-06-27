@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882608eba2352e24dbbd1a34af154290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStory: 1
+  isEndless: 0
 --- !u!4 &678857733
 Transform:
   m_ObjectHideFlags: 0
@@ -4377,6 +4377,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 632704681}
+    - target: {fileID: 6306830986864099586, guid: afab4cdbf732c3746b99e8f60a2e61c9, type: 3}
+      propertyPath: canJump
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6306830986864099586, guid: afab4cdbf732c3746b99e8f60a2e61c9, type: 3}
       propertyPath: groundCheck
       value: 

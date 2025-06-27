@@ -1359,6 +1359,25 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score:'
+--- !u!1 &543774443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5065602938558275697, guid: 227b652370b83d843b806890ab521542, type: 3}
+  m_PrefabInstance: {fileID: 697439408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &543774446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543774443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7236574075b38bc4393c0266cbb86c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logic: {fileID: 0}
+  destroyDistance: 10
 --- !u!1 &626446611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882608eba2352e24dbbd1a34af154290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStory: 1
+  isEndless: 0
 --- !u!4 &682985513
 Transform:
   m_ObjectHideFlags: 0
@@ -1626,7 +1645,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5065602938558275697, guid: 227b652370b83d843b806890ab521542, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 543774446}
   m_SourcePrefab: {fileID: 100100000, guid: 227b652370b83d843b806890ab521542, type: 3}
 --- !u!1 &726085564
 GameObject:
@@ -3125,12 +3147,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundPrefab: {fileID: 2414320446219437693, guid: 560a9e1ea85dde241b5b479a77b6f582, type: 3}
   spawnX: 10
+  currentX: 0
+  groundWidth: 1
   yPositions:
   - 0
   - -5
   - -3
   - -1
-  sequenceLength: 80
+  sequenceLength: 10
+  prevIndex: 1
 --- !u!4 &1255711018
 Transform:
   m_ObjectHideFlags: 0
@@ -3536,7 +3561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveRate: 1
   acceleration: 0.5
-  maxSpeed: 4.5
+  maxSpeed: 4.7
   logic: {fileID: 0}
 --- !u!1 &1594068809
 GameObject:

@@ -4,15 +4,13 @@ public class spawn_ground : MonoBehaviour
 {
     public GameObject groundPrefab;     // The ground prefab to spawn
     public float spawnX = 0f;           // Starting X coordinate for spawning
+    public float currentX;
+    public float groundWidth = 1f;      // Width of the ground prefab
     public float[] yPositions = new float[4]; // Array: [0] = no ground, [1] = ground, [2] = mid ground, [3] = high ground
-    public int sequenceLength = 50;     // Number of ground objects to spawn
+    public int sequenceLength = 10;     // Number of ground objects to spawn
+    public int prevIndex = 1;
 
     void Start()
-    {
-        SpawnGroundSequence();
-    }
-
-    void SpawnGroundSequence()
     {
         if (groundPrefab == null)
         {
@@ -20,7 +18,6 @@ public class spawn_ground : MonoBehaviour
             return;
         }
 
-        float groundWidth = 1f;
         Renderer renderer = groundPrefab.GetComponent<Renderer>();
         if (renderer != null)
         {
@@ -30,15 +27,36 @@ public class spawn_ground : MonoBehaviour
         {
             Debug.LogWarning("groundPrefab does not have a Renderer component. Using default groundWidth = 1f.");
         }
+        
+        currentX = spawnX;
 
+        SpawnGroundSequence();
+    }
+
+    void Update()
+    {
+        // Count the number of active ground objects (tagged "ground")
+        int groundCount = 0;
+        GameObject[] groundObjects = GameObject.FindGameObjectsWithTag("ground");
+
+        foreach (GameObject obj in groundObjects)
+        {
+            groundCount++;
+        }
+
+        // If less than 5, spawn a new sequence
+        if (groundCount < 5)
+        {
+            SpawnGroundSequence();
+        }
+    }
+
+    void SpawnGroundSequence()
+    {
         int[] groundPattern = new int[sequenceLength];
 
-        // First spawn
-        groundPattern[0] = Random.Range(2, 3); // 1 or 2 only
-
-        for (int i = 1; i < sequenceLength; i++)
+        for (int i = 0; i < sequenceLength; i++)
         {
-            int prevIndex = groundPattern[i - 1];
             int nextIndex;
 
             // Can only go up by 1, or down by any amount
@@ -48,9 +66,10 @@ public class spawn_ground : MonoBehaviour
             // Randomly pick from possible indices
             nextIndex = Random.Range(min, max);
             groundPattern[i] = nextIndex;
+            prevIndex = nextIndex;
+
         }
 
-        float currentX = spawnX;
 
         for (int i = 0; i < groundPattern.Length; i++)
         {
