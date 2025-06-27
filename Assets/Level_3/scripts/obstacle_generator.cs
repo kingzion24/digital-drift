@@ -1,31 +1,38 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class pipespawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject pipe;
-    public float spawnRate = 2; // Time in seconds between spawns
-    private float timer = 0;
+    
+    public float startInterval = 2f;           // Initial spawn interval
+    public float endInterval = 0.5f;           // Final spawn interval
+    public float intervalDecreaseDuration = 30f; // Time over which interval decreases (seconds)
+    private float elapsedTime = 0f;
+
     public float heightOffset = 3; // Height offset for the pipe spawn position
     void Start()
     {
-
+        StartCoroutine(SpawnPipes());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnPipes()
     {
-        if (timer < spawnRate)
-        {
-            timer = timer + Time.deltaTime;
-        }
-        else
+        while (true)
         {
             spawnPipe();
-            timer = 0;
-        }
 
+            // Calculate current interval
+            float t = Mathf.Clamp01(elapsedTime / intervalDecreaseDuration);
+            float currentInterval = Mathf.Lerp(startInterval, endInterval, t);
+
+            yield return new WaitForSeconds(currentInterval);
+
+            elapsedTime += currentInterval;
+        }
     }
+
     void spawnPipe()
     {
         float lowestPoint = transform.position.y - heightOffset;

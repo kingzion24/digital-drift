@@ -9,27 +9,96 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject winScreen;
     public GameObject pauseScreen;
+    public GameObject instructionScreen;
+    public GameObject controlsScreen;
     public Text targetText;
     public charactermvmt player;
-    public int tergetScore = 10; // Set a target score for the game
+    public int targetScore = 10; // Set a target score for the game
+    public bool isEndless = false; // Flag to indicate if the game is endless
+    public int level;
+    private string highScoreKey ="";
 
     void Start()
-    { 
-        if(targetText != null)
+    {
+        isEndless = GameObject.FindGameObjectWithTag("mode").GetComponent<mode_controller>().isEndless; // Check if the game is in endless mode
+        level = SceneManager.GetActiveScene().buildIndex;
+        
+        if (targetText != null && !isEndless)
         {
-            targetText.text = "Target: " + tergetScore.ToString();
+            targetText.text = "Target: " + targetScore.ToString();
+        }
+        else if (targetText != null && isEndless)
+        {
+            startEndless();
         }
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<charactermvmt>();
+        Time.timeScale = 0;
+
+    }
+
+    void startEndless()
+    {
+        highScoreKey = "Level " + level + " HighScore";
+        try
+        {
+            targetScore = PlayerPrefs.GetInt("Level " + level + " HighScore", 0); // Load high score from PlayerPrefs
+        }
+        catch
+        {
+            targetScore = 0; // Default to 0 if no high score exists
+        }
+        targetText.text = "High Score: " + targetScore.ToString();
+        showControls();
+
+    }
+
+    void Update()
+    {
+        checkStatus(); // Check the game status every frame
+    }
+
+    public void startGame()
+    {
+        instructionScreen.SetActive(false);
+        controlsScreen.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void addScore(int points)
     {
         playerScore += points;
         scoreText.text = "Score: " + playerScore.ToString();
-        if(playerScore >= tergetScore)
+        
+    }
+
+    public void checkStatus()
+    {
+        if (playerScore >= targetScore && !isEndless)
         {
-            Debug.Log("Target Score Reached: " + playerScore);
             winGame();
+        }
+        else if (!player.isAlive)
+        {
+            gameOver();
+        }else if(isEndless && playerScore >= targetScore)
+        {
+            updateHighScore();
+        }
+
+    }
+
+    public void updateHighScore()
+    {
+        string highScoreKey = "Level " + level + " HighScore";
+        int currentHighScore = PlayerPrefs.GetInt(highScoreKey, 0);
+        if (playerScore > currentHighScore)
+        {
+            PlayerPrefs.SetInt(highScoreKey, playerScore);
+            PlayerPrefs.Save();
+            if (targetText != null)
+            {
+                targetText.text = "High Score: " + playerScore.ToString();
+            }
         }
     }
 
@@ -42,11 +111,8 @@ public class LogicScript : MonoBehaviour
 
     public void restartGame()
     {
-        //playerScore = 0;
-        //scoreText.text = "Score: " + playerScore.ToString();
         Debug.Log("Game Restarted");
         Time.timeScale = 1;
-        //SceneManager.LoadScene();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reloads the current scene
     }
 
@@ -62,6 +128,12 @@ public class LogicScript : MonoBehaviour
         player.Die();
         Time.timeScale = 0;
         Debug.Log("Game Over");
+    }
+
+    public void showControls()
+    {
+        instructionScreen.SetActive(false);
+        controlsScreen.SetActive(true);
     }
 
     public void nextLevel()
@@ -86,6 +158,17 @@ public class LogicScript : MonoBehaviour
             pauseScreen.SetActive(false);
             Debug.Log("Game Resumed");
         }
+    }
+
+    public void pickBIOS()
+    {
+        addScore(1); // Add score when picking up a BIOS chip
+
+    }
+
+    public void platformLanding()
+    {
+        addScore(1);
     }
 
 }

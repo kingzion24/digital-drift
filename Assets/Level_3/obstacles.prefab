@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 649589989701566421}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.559, y: 5.1259, z: -1.9191589}
+  m_LocalPosition: {x: 2.559, y: 5, z: -1.9191589}
   m_LocalScale: {x: 2.4775798, y: 2.7822099, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -156,7 +156,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.34, y: 3.64}
+  m_Size: {x: 0.25, y: 3.5}
   m_EdgeRadius: 0
 --- !u!114 &2883142497062952129
 MonoBehaviour:
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ceffcbca26e344583b40f4836b1c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logic: {fileID: 0}
 --- !u!1 &7000237674496971816
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +240,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.56, y: -1.27}
+  m_Offset: {x: 2.98, y: -1.27}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -249,7 +250,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.85, y: 2.74}
+  m_Size: {x: 0.5, y: 3.92}
   m_EdgeRadius: 0
 --- !u!114 &7000921596748266390
 MonoBehaviour:
@@ -265,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   deadZone: -45
+  logic: {fileID: 0}
 --- !u!1 &8357726215880364812
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +296,7 @@ Transform:
   m_GameObject: {fileID: 8357726215880364812}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.48, y: -7.67, z: -1.9191589}
+  m_LocalPosition: {x: 2.48, y: -8, z: -1.9191589}
   m_LocalScale: {x: 2.477579, y: 2.7822096, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -421,7 +423,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.34, y: 3.64}
+  m_Size: {x: 0.25, y: 3.5}
   m_EdgeRadius: 0
 --- !u!114 &7732207369397751731
 MonoBehaviour:
@@ -435,3 +437,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ceffcbca26e344583b40f4836b1c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logic: {fileID: 0}

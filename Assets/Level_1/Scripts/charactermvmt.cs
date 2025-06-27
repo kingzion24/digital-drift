@@ -11,13 +11,17 @@ public class charactermvmt : MonoBehaviour
     public bool canMove = true;
 
     public Transform groundCheck;
-    public float checkRadius = 0.2f;
+    public float checkRadius = 0.1f;
     public LayerMask groundLayer;
 
     private bool isGrounded;
 
     void Update()
     {
+        if(transform.position.y < -20)
+        {
+            Die(); // If the player falls below a certain Y position, they die
+        }
         if (isAlive)
         {
 

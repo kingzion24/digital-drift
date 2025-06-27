@@ -25,9 +25,15 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/level I bios.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/settings.unity
+    m_path: Assets/Scenes/level II ram rush.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/level III Monitor Maneuver.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/level_menu.unity
   - m_enabled: 1
     m_path: Assets/Scenes/credit.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/settings.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []

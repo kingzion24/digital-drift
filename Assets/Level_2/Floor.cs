@@ -1,18 +1,12 @@
 using UnityEngine;
 
-public class FallingPiece : MonoBehaviour
+public class Floor : MonoBehaviour
 {
-    public float fallSpeed = 0.2f;
     public LogicScript logic;
 
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-    }
-
-    void Update()
-    {
-        transform.Translate(Vector2.down * fallSpeed/100000 * Time.deltaTime);
 
     }
 
@@ -20,8 +14,7 @@ public class FallingPiece : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            logic.pickBIOS(); 
-            Destroy(gameObject);
+            logic.platformLanding();
         }
     }
 }
