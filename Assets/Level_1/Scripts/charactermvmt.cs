@@ -15,55 +15,48 @@ public class charactermvmt : MonoBehaviour
     public LayerMask groundLayer;
 
     private bool isGrounded;
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
-        if(transform.position.y < -20)
+        // Kill the player if they fall out of bounds
+        if (transform.position.y < -20 && isAlive)
         {
-            Die(); // If the player falls below a certain Y position, they die
+            Die();
         }
-        if (isAlive)
-        {
 
-            if (canMove) { 
-                Move(); 
-            }
-            if (canFly)
-            {
-                Fly();
-            }
-            else if (canJump)
-            {
-                Jump();
-            }
-        }
+        if (!isAlive) return;
+
+        if (canMove)
+            Move();
+
+        if (canFly)
+            Fly();
+        else if (canJump)
+            Jump();
+
+        UpdateAnimator();
     }
 
     void Move()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right Arrow
-        if(moveInput < 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if(moveInput > 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
+        float moveInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-    }
 
-    void Fly()
-    {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            rb.linearVelocity = Vector2.up * jumpForce;
-        }
+        // Flip sprite based on direction
+        if (moveInput < 0)
+            GetComponent<SpriteRenderer>().flipX = true;
+        else if (moveInput > 0)
+            GetComponent<SpriteRenderer>().flipX = false;
     }
 
     void Jump()
     {
-        // Check if the player is touching the ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
         if (isGrounded)
         {
@@ -71,10 +64,35 @@ public class charactermvmt : MonoBehaviour
         }
     }
 
+    void Fly()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            rb.linearVelocity = Vector2.up * jumpForce;
+        }
+    }
+
+    void UpdateAnimator()
+    {
+        if (anim == null) return;
+
+        // Animator parameters for blend tree and transitions
+        anim.SetFloat("xvelocity", Mathf.Abs(rb.linearVelocity.x));        // Horizontal speed
+        anim.SetFloat("yvelocity", rb.linearVelocity.y);                   // Vertical speed
+        anim.SetBool("isjumping", !IsOnGround());                    // Off ground = jumping
+        anim.SetBool("isdead", !isAlive);                            // If player is dead
+    }
+
+    bool IsOnGround()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+    }
+
     public void Die()
     {
         isAlive = false;
-        rb.linearVelocity = Vector2.zero; // Stop movement
+        rb.linearVelocity = Vector2.zero;
+        UpdateAnimator();
         Debug.Log("Player has died");
     }
 }
