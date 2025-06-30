@@ -16,11 +16,18 @@ public class charactermvmt : MonoBehaviour
 
     private bool isGrounded;
 
+    private SoundController soundController;
+
+    void Start()
+    {
+        soundController = GameObject.FindGameObjectWithTag("sound").GetComponent<SoundController>();
+    }
+
     void Update()
     {
-        if(transform.position.y < -20)
+        if(transform.position.y < -15)
         {
-            Die(); // If the player falls below a certain Y position, they die
+            Die();
         }
         if (isAlive)
         {
@@ -63,10 +70,10 @@ public class charactermvmt : MonoBehaviour
 
     void Jump()
     {
-        // Check if the player is touching the ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
         if (isGrounded)
         {
+            soundController.playJumpSound();
             Fly();
         }
     }
@@ -74,7 +81,7 @@ public class charactermvmt : MonoBehaviour
     public void Die()
     {
         isAlive = false;
-        rb.linearVelocity = Vector2.zero; // Stop movement
+        rb.linearVelocity = Vector2.zero;
         Debug.Log("Player has died");
     }
 }

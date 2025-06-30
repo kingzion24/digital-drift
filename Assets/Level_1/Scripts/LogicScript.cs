@@ -11,6 +11,7 @@ public class LogicScript : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject instructionScreen;
     public GameObject controlsScreen;
+    private SoundController soundController;
     public Text targetText;
     public charactermvmt player;
     public int targetScore = 10; // Set a target score for the game
@@ -31,9 +32,12 @@ public class LogicScript : MonoBehaviour
         {
             startEndless();
         }
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<charactermvmt>();
+        soundController = GameObject.FindGameObjectWithTag("sound").GetComponent<SoundController>();
         Time.timeScale = 0;
 
+        soundController.playBackgroundMusic();
     }
 
     void startEndless()
@@ -45,16 +49,17 @@ public class LogicScript : MonoBehaviour
         }
         catch
         {
-            targetScore = 0; // Default to 0 if no high score exists
+            targetScore = 0;
         }
         targetText.text = "High Score: " + targetScore.ToString();
         showControls();
 
     }
 
-    void Update()
+    public void showControls()
     {
-        checkStatus(); // Check the game status every frame
+        instructionScreen.SetActive(false);
+        controlsScreen.SetActive(true);
     }
 
     public void startGame()
@@ -64,11 +69,9 @@ public class LogicScript : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void addScore(int points)
+    void Update()
     {
-        playerScore += points;
-        scoreText.text = "Score: " + playerScore.ToString();
-        
+        checkStatus();
     }
 
     public void checkStatus()
@@ -84,6 +87,13 @@ public class LogicScript : MonoBehaviour
         {
             updateHighScore();
         }
+
+    }
+    
+    public void addScore(int points)
+    {
+        playerScore += points;
+        scoreText.text = "Score: " + playerScore.ToString();
 
     }
 
@@ -104,6 +114,7 @@ public class LogicScript : MonoBehaviour
 
     public void winGame()
     {
+        soundController.playWinSound();
         Debug.Log("You Win!");
         Time.timeScale = 0;
         winScreen.SetActive(true);
@@ -123,17 +134,12 @@ public class LogicScript : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void gameOver() { 
+    public void gameOver() {
+        soundController.playGameOverSound();
         gameOverScreen.SetActive(true);
         player.Die();
         Time.timeScale = 0;
         Debug.Log("Game Over");
-    }
-
-    public void showControls()
-    {
-        instructionScreen.SetActive(false);
-        controlsScreen.SetActive(true);
     }
 
     public void nextLevel()
@@ -162,12 +168,14 @@ public class LogicScript : MonoBehaviour
 
     public void pickBIOS()
     {
-        addScore(1); // Add score when picking up a BIOS chip
+        soundController.playScoreSound();
+        addScore(1); 
 
     }
 
     public void platformLanding()
     {
+        soundController.playLandingSound();
         addScore(1);
     }
 

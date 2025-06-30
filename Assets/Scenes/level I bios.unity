@@ -1210,6 +1210,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &604862338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 604862341}
+  - component: {fileID: 604862340}
+  - component: {fileID: 604862339}
+  m_Layer: 0
+  m_Name: SoundController
+  m_TagString: sound
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &604862339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604862338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7eb0995e6febf84280f84c3879cdec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 1
+--- !u!114 &604862340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604862338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03699cb2dcbd2f489d0553440c34070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &604862341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604862338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 160.77097, y: -9.58917, z: 3.941659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &632704681 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1854031055947546443, guid: afab4cdbf732c3746b99e8f60a2e61c9, type: 3}
@@ -3234,7 +3292,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "The BIOS is Failing to Boot!!\n \nCollect 10 BIOS Chips while dodging
     the Error Blocks to Boot the BIOS.\n\nYou can only Move Left and Right with the
-    arrows on the number pad. "
+    arrows."
 --- !u!222 &1500504647
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4456,3 +4514,4 @@ SceneRoots:
   - {fileID: 2010784978}
   - {fileID: 385600365}
   - {fileID: 678857733}
+  - {fileID: 604862341}

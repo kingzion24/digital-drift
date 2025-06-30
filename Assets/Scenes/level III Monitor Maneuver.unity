@@ -2421,6 +2421,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff420d0ad1eec0488a4ff6ae362e8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1316343523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1316343526}
+  - component: {fileID: 1316343525}
+  - component: {fileID: 1316343524}
+  m_Layer: 0
+  m_Name: SoundController
+  m_TagString: sound
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1316343524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316343523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7eb0995e6febf84280f84c3879cdec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 1
+--- !u!114 &1316343525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316343523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03699cb2dcbd2f489d0553440c34070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1316343526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316343523}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 160.77097, y: -9.58917, z: 3.941659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362623910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,7 +3053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882608eba2352e24dbbd1a34af154290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStory: 1
+  isEndless: 0
 --- !u!4 &1543986259
 Transform:
   m_ObjectHideFlags: 0
@@ -4101,3 +4159,4 @@ SceneRoots:
   - {fileID: 1570768927}
   - {fileID: 1787491867}
   - {fileID: 1543986259}
+  - {fileID: 1316343526}

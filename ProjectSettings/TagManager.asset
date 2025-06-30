@@ -8,6 +8,7 @@ TagManager:
   - Logic
   - Enemy
   - mode
+  - sound
   layers:
   - Default
   - TransparentFX
