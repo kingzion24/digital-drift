@@ -22,7 +22,7 @@ public class LogicScript : MonoBehaviour
     void Start()
     {
         isEndless = GameObject.FindGameObjectWithTag("mode").GetComponent<mode_controller>().isEndless; // Check if the game is in endless mode
-        level = SceneManager.GetActiveScene().buildIndex;
+        level = SceneManager.GetActiveScene().buildIndex - 4;
         
         if (targetText != null && !isEndless)
         {

@@ -44,8 +44,8 @@ public class spawn_ground : MonoBehaviour
             groundCount++;
         }
 
-        // If less than 5, spawn a new sequence
-        if (groundCount < 5)
+        // If less than 8, spawn a new sequence
+        if (groundCount < 8)
         {
             SpawnGroundSequence();
         }

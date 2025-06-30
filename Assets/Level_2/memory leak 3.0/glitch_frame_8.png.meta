@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      glitch_frame_8_0: 7829936666168849251
+      glitch_frame_8_1: 3442399351302197148
+      glitch_frame_8_2: -1906327604121763798
+      glitch_frame_8_3: -2982175727961921840
+      glitch_frame_8_4: -6776877860664412067
+      glitch_frame_8_5: -5251229507029594208
+      glitch_frame_8_6: 3794531353897110411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

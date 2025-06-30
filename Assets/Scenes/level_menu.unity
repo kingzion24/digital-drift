@@ -119,6 +119,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &232573775
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7675403804646322090, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_Name
+      value: SoundController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 160.77097
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.58917
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.941659
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485622100216800159, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+--- !u!114 &232573776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3130758686218983371, guid: eb0a6ba621b1e7a46929bd324d67fc08, type: 3}
+  m_PrefabInstance: {fileID: 232573775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03699cb2dcbd2f489d0553440c34070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &615643828
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +386,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 232573776}
+        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
+        m_MethodName: playButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 615643833}
         m_TargetAssemblyTypeName: level_selector, Assembly-CSharp
         m_MethodName: level_3
@@ -624,6 +704,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 232573776}
+        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
+        m_MethodName: playButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 615643833}
         m_TargetAssemblyTypeName: level_selector, Assembly-CSharp
         m_MethodName: level_2
@@ -674,64 +766,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285979404}
   m_CullTransparentMesh: 1
---- !u!1 &1337341171
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1337341174}
-  - component: {fileID: 1337341173}
-  - component: {fileID: 1337341172}
-  m_Layer: 0
-  m_Name: SoundController
-  m_TagString: sound
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1337341172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337341171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7eb0995e6febf84280f84c3879cdec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectIndex: 1
---- !u!114 &1337341173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337341171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c03699cb2dcbd2f489d0553440c34070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1337341174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337341171}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160.77097, y: -9.58917, z: 3.941659}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553607699
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +849,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 232573776}
+        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
+        m_MethodName: playButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 615643833}
         m_TargetAssemblyTypeName: level_selector, Assembly-CSharp
         m_MethodName: level_1
@@ -1291,4 +1337,4 @@ SceneRoots:
   - {fileID: 615643832}
   - {fileID: 1631927302}
   - {fileID: 1988923602}
-  - {fileID: 1337341174}
+  - {fileID: 232573775}

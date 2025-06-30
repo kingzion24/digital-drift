@@ -14,17 +14,17 @@ public class level_selector : MonoBehaviour
     public void level_1()
     {
         mode.isEndless = true;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
 
     }
     public void level_2()
     {
         mode.isEndless = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(6);
     }
     public void level_3()
     {
         mode.isEndless = true;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(7);
     }
 }
