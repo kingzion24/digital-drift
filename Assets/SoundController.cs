@@ -4,11 +4,13 @@ public class SoundController : MonoBehaviour
 {
 
     public AudioSource music, sfx;
-    public AudioClip button_click, jump, landing, background, win, game_over, score;
+    public AudioClip button_click, jump, landing, menu_background, l1_background, l2_background, l3_background, win, game_over, score;
+
+    public int level = 0;
 
     void Start()
     {
-        playBackgroundMusic();
+        playBackgroundMusic(level);
     }
 
 
@@ -47,9 +49,24 @@ public class SoundController : MonoBehaviour
         Debug.Log("Score sound played");
     }
 
-    public void playBackgroundMusic()
+    public void playBackgroundMusic(int level = 0)
     {
-        music.clip = background;
+        switch (level)
+        {
+            case 1:
+                music.clip = l1_background;
+                break;
+            case 2:
+                music.clip = l2_background;
+                break;
+            case 3:
+                music.clip = l3_background;
+                break;
+            default:
+                music.clip = menu_background;
+                break;
+        }
+
         music.Play();
         Debug.Log("Background music played");
     }
@@ -59,5 +76,11 @@ public class SoundController : MonoBehaviour
         sfx.clip = button_click;
         sfx.Play();
         Debug.Log("Button click sound played");
+    }
+
+    public void stopBackgroundMusic()
+    {
+        music.clip = null;
+        music.Play();
     }
 }

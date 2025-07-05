@@ -94,6 +94,7 @@ public class charactermvmt : MonoBehaviour
     public void Die()
     {
         isAlive = false;
+        soundController.playGameOverSound();
         rb.linearVelocity = Vector2.zero;
         UpdateAnimator();
         Debug.Log("Player has died");

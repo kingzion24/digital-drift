@@ -27,4 +27,10 @@ public class level_selector : MonoBehaviour
         mode.isEndless = true;
         SceneManager.LoadScene(7);
     }
+
+    public void menu()
+    {
+        mode.isEndless = false;
+        SceneManager.LoadScene(0);
+    }
 }

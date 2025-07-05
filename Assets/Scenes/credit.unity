@@ -162,6 +162,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03699cb2dcbd2f489d0553440c34070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 0}
+  sfx: {fileID: 0}
+  button_click: {fileID: 0}
+  jump: {fileID: 0}
+  landing: {fileID: 0}
+  menu_background: {fileID: 0}
+  l1_background: {fileID: 0}
+  l2_background: {fileID: 0}
+  l3_background: {fileID: 0}
+  win: {fileID: 0}
+  game_over: {fileID: 0}
+  score: {fileID: 0}
+  level: 0
 --- !u!4 &265355196
 Transform:
   m_ObjectHideFlags: 0
@@ -474,6 +487,7 @@ GameObject:
   - component: {fileID: 1109390171}
   - component: {fileID: 1109390170}
   - component: {fileID: 1109390169}
+  - component: {fileID: 1109390172}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -595,6 +609,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109390167}
   m_CullTransparentMesh: 1
+--- !u!114 &1109390172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109390167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d50414ef52b9c64d888894c4a4f1f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalScale: {x: 1, y: 1, z: 1}
+  hoverScale: {x: 1.2, y: 1.2, z: 1}
+  growSpeed: 10
+  buttonText: {fileID: 0}
+  normalTextColor: {r: 0, g: 0, b: 1, a: 1}
+  hoverTextColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1869000540
 GameObject:
   m_ObjectHideFlags: 0

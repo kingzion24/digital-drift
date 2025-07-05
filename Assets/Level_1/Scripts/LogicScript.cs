@@ -37,7 +37,7 @@ public class LogicScript : MonoBehaviour
         soundController = GameObject.FindGameObjectWithTag("sound").GetComponent<SoundController>();
         Time.timeScale = 0;
 
-        soundController.playBackgroundMusic();
+        soundController.playBackgroundMusic(level);
     }
 
     void startEndless()
@@ -72,6 +72,18 @@ public class LogicScript : MonoBehaviour
     void Update()
     {
         checkStatus();
+        if ((Input.GetKeyDown(KeyCode.Escape)|| Input.GetKeyDown(KeyCode.P)) && !gameOverScreen.activeSelf && !winScreen.activeSelf)
+        {
+            pause();
+        }
+        else if((Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0))&& controlsScreen.activeSelf)
+        {
+            startGame();
+        }
+        else if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && instructionScreen.activeSelf)
+        {
+            showControls();
+        }
     }
 
     public void checkStatus()
@@ -114,10 +126,14 @@ public class LogicScript : MonoBehaviour
 
     public void winGame()
     {
-        soundController.playWinSound();
-        Debug.Log("You Win!");
-        Time.timeScale = 0;
-        winScreen.SetActive(true);
+        if (!winScreen.activeSelf)
+        {
+            soundController.stopBackgroundMusic();
+            soundController.playWinSound();
+            Debug.Log("You Win!");
+            Time.timeScale = 0;
+            winScreen.SetActive(true);
+        }
     }
 
     public void restartGame()
@@ -131,15 +147,20 @@ public class LogicScript : MonoBehaviour
     {
         Debug.Log("Returning to Main Menu");
         Time.timeScale = 1;
+        soundController.playBackgroundMusic(0);
         SceneManager.LoadScene(0);
     }
 
-    public void gameOver() {
-        soundController.playGameOverSound();
-        gameOverScreen.SetActive(true);
-        player.Die();
-        Time.timeScale = 0;
-        Debug.Log("Game Over");
+    public void gameOver()
+    {
+        if (!gameOverScreen.activeSelf)
+        {
+            gameOverScreen.SetActive(true);
+            player.Die();
+            soundController.stopBackgroundMusic();
+            Time.timeScale = 0;
+            Debug.Log("Game Over");
+        }
     }
 
     public void nextLevel()

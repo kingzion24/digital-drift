@@ -174,7 +174,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -308,12 +308,16 @@ MonoBehaviour:
   music: {fileID: 200417706451771437}
   sfx: {fileID: 3725490901148914894}
   button_click: {fileID: 8300000, guid: 431490ecff58530428661393ee6498ee, type: 3}
-  jump: {fileID: 0}
+  jump: {fileID: 8300000, guid: 964722c3239e242478800ea4c7d2e1bb, type: 3}
   landing: {fileID: 0}
-  background: {fileID: 8300000, guid: 32d252952d4db7d47bbf34158a512093, type: 3}
-  win: {fileID: 0}
-  game_over: {fileID: 0}
-  score: {fileID: 8300000, guid: cd8370340b51a2a4ab5e7368936fd9e8, type: 3}
+  menu_background: {fileID: 8300000, guid: 32d252952d4db7d47bbf34158a512093, type: 3}
+  l1_background: {fileID: 8300000, guid: bbacd0c2f4b143a47af15d2bc3a0a8d5, type: 3}
+  l2_background: {fileID: 8300000, guid: 8936cc69e6802604ba0049882f741bd6, type: 3}
+  l3_background: {fileID: 8300000, guid: 5b8cbd4d1d334454c9e4a654494dab7b, type: 3}
+  win: {fileID: 8300000, guid: 4414530225a68f84699c326fd3c97d7a, type: 3}
+  game_over: {fileID: 8300000, guid: ab4387b7ce3261049bb87336465cf38c, type: 3}
+  score: {fileID: 8300000, guid: ed99ecf4a8feb324dab4e2a40df8d46b, type: 3}
+  level: 0
 --- !u!114 &7768554227509844116
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1678,7 +1678,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 444982819}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Loadselectorcharacter
+        m_MethodName: loadLevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
