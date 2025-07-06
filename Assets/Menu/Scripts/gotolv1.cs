@@ -3,9 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    public void loadLevel1()
+    void Start()
     {
-        SceneManager.LoadScene(5); 
+        Time.timeScale = 1; // Ensure the game is running at normal speed when starting
+        mode_controller mode = GameObject.FindGameObjectWithTag("mode").GetComponent<mode_controller>();
+        mode.cutscene = 0; // Reset cutscene index to 0 when starting the game
+        mode.isEndless = false; // Set the game mode to non-endless by default
+        GameObject.FindGameObjectWithTag("sound").GetComponent<SoundController>().playBackgroundMusic(0); // Play the menu background music
+    }
+
+    public void loadBootSequence()
+    {
+        SceneManager.LoadScene(1); 
 
     }
     public void loadEndlessMenu()

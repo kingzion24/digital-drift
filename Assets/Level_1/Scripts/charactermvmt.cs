@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class charactermvmt : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class charactermvmt : MonoBehaviour
     public LayerMask groundLayer;
 
     private bool isGrounded;
-    private Animator anim;
+    public Animator anim;
     private SoundController soundController;
 
     void Start()
@@ -26,23 +27,23 @@ public class charactermvmt : MonoBehaviour
 
     void Update()
     {
-        // Kill the player if they fall out of bounds
-        if (transform.position.y < -20 && isAlive)
-        {
-            Die();
+        
+        if(isAlive){
+            // Kill the player if they fall out of bounds
+            if (transform.position.y < -7)
+            {
+                Die();
+            }
+
+
+            if (canMove)
+                Move();
+
+            if (canFly)
+                Fly();
+            else if (canJump)
+                Jump();
         }
-
-        if (!isAlive) return;
-
-        if (canMove)
-            Move();
-
-        if (canFly)
-            Fly();
-        else if (canJump)
-            Jump();
-
-        UpdateAnimator();
     }
 
     void Move()
@@ -55,6 +56,8 @@ public class charactermvmt : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = true;
         else if (moveInput > 0)
             GetComponent<SpriteRenderer>().flipX = false;
+        
+        UpdateAnimator();
     }
 
     void Jump()
@@ -72,6 +75,7 @@ public class charactermvmt : MonoBehaviour
         {
             soundController.playJumpSound();
             rb.linearVelocity = Vector2.up * jumpForce;
+            anim.SetTrigger("jump");  // Make sure the animator has a "die" trigger set up
         }
     }
 
@@ -91,12 +95,24 @@ public class charactermvmt : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
     }
 
-    public void Die()
+    public async Task Die()
     {
         isAlive = false;
         soundController.playGameOverSound();
         rb.linearVelocity = Vector2.zero;
         UpdateAnimator();
+        // Trigger death animation
+        anim.SetTrigger("die");  // Make sure the animator has a "die" trigger set up
+
+        while (!anim.GetCurrentAnimatorStateInfo(0).IsName("die"))
+        {
+            await Task.Yield(); // Wait for next frame
+        }
+
+        // Wait for the animation to finish
+        float animLength = anim.GetCurrentAnimatorStateInfo(0).length;
+        await Task.Delay((int)(animLength * 800));
+
         Debug.Log("Player has died");
     }
 }

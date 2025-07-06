@@ -317,6 +317,8 @@ MonoBehaviour:
   win: {fileID: 8300000, guid: 4414530225a68f84699c326fd3c97d7a, type: 3}
   game_over: {fileID: 8300000, guid: ab4387b7ce3261049bb87336465cf38c, type: 3}
   score: {fileID: 8300000, guid: ed99ecf4a8feb324dab4e2a40df8d46b, type: 3}
+  booting_background: {fileID: 8300000, guid: f2db702d6c5ad454198bcf85f918a096, type: 3}
+  congrats_background: {fileID: 8300000, guid: f2db702d6c5ad454198bcf85f918a096, type: 3}
   level: 0
 --- !u!114 &7768554227509844116
 MonoBehaviour:

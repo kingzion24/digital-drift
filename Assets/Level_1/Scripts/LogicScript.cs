@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class LogicScript : MonoBehaviour
 {
@@ -151,13 +152,15 @@ public class LogicScript : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void gameOver()
+    public async void gameOver()
     {
         if (!gameOverScreen.activeSelf)
         {
-            gameOverScreen.SetActive(true);
-            player.Die();
+            Debug.Log("Game Over Started");
             soundController.stopBackgroundMusic();
+            gameOverScreen.SetActive(true);
+            await player.Die();
+            // await Task.Delay(2000); // Wait for 5 second before showing game over
             Time.timeScale = 0;
             Debug.Log("Game Over");
         }
@@ -167,8 +170,8 @@ public class LogicScript : MonoBehaviour
     {
         Debug.Log("Going to Next Level");
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); // Reloads the current scene
-
+        GameObject.FindGameObjectWithTag("mode").GetComponent<mode_controller>().cutscene = level; // Set the cutscene index for the next level
+        SceneManager.LoadScene(1); 
     }
 
     public void pause()

@@ -4,7 +4,7 @@ public class SoundController : MonoBehaviour
 {
 
     public AudioSource music, sfx;
-    public AudioClip button_click, jump, landing, menu_background, l1_background, l2_background, l3_background, win, game_over, score;
+    public AudioClip button_click, jump, landing, menu_background, l1_background, l2_background, l3_background, win, game_over, score, booting_background, congrats_background;
 
     public int level = 0;
 
@@ -61,6 +61,12 @@ public class SoundController : MonoBehaviour
                 break;
             case 3:
                 music.clip = l3_background;
+                break;
+            case 4:
+                music.clip = booting_background;
+                break;
+            case 5:
+                music.clip = congrats_background;
                 break;
             default:
                 music.clip = menu_background;
