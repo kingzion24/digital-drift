@@ -13,6 +13,7 @@ public class LogicScript : MonoBehaviour
     public GameObject instructionScreen;
     public GameObject controlsScreen;
     private SoundController soundController;
+    public CameraShakeController cameraShakeController;
     public Text targetText;
     public charactermvmt player;
     public int targetScore = 10; // Set a target score for the game
@@ -192,6 +193,10 @@ public class LogicScript : MonoBehaviour
 
     public void pickBIOS()
     {
+        if (cameraShakeController != null)
+        {
+            cameraShakeController.ReduceShakeFromChipCollect();
+        }
         soundController.playScoreSound();
         addScore(1); 
 

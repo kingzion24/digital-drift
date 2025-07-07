@@ -176,6 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseFallSpeed: 5
-  fallSpeedIncreaseRate: 0.2
+  fallSpeedIncreaseRate: 0.3
   destroyOffset: 2
   logic: {fileID: 0}

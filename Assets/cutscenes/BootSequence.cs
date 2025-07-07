@@ -21,43 +21,44 @@ public class BootSequence : MonoBehaviour
     // The boot lines that will appear on screen
     private string[][] bootLines = new string[][] {
     new string[]{
-        "BOOTING SYSTEM...\n",
-        "SYSTEM ERROR: BIOS CHIP MISSING\n",
-        "MEMORY STATUS: CORRUPTED\n",
-        "DISPLAY MODULE: GLITCHING\n",
-        "THREAT LEVEL: CRITICAL\n",
-        "\n> Initializing Recovery Agent...\n",
-        "> Welcome, Avatar. Your mission is to reclaim the lost components.\n",
-        "> Begin Operation: DIGITAL DRIFT.\n",
-        "> FIRST STAGE: BIOS BLITZ.\n"
+        "[BOOT SEQUENCE INITIATED...]\n",
+        "[ERROR] BIOS.CHIP -> NOT FOUND\n",
+        "[MEMORY] STATUS = CORRUPTED\n",
+        "[DISPLAY] MODULE = GLITCHING\n",
+        "[THREAT] LEVEL = CRITICAL\n",
+        "\n> exec recovery_agent --init\n",
+        "> AVATAR LINK ESTABLISHED...\n",
+        "> OBJECTIVE: Reclaim critical system components.\n",
+        "> MISSION START: DIGITAL_DRIFT > STAGE_01: BIOS_BLITZ\n"
     },
     new string[]{
-        "BOOTING SYSTEM...\n",
-        "BIOS SUCCESSFULLY BOOTED\n",
-        "MEMORY STATUS: CORRUPTED\n",
-        "DISPLAY MODULE: GLITCHING\n",
-        "THREAT LEVEL: HIGH\n",
-        "> Good Job, Avatar. Continue reclaiming the lost components.\n",
-        "> NEXT STAGE: RAM RUSH.\n"
+        "[BOOT SEQUENCE INITIATED...]\n",
+        "[OK] BIOS.CHIP -> VERIFIED\n",
+        "[MEMORY] STATUS = CORRUPTED\n",
+        "[DISPLAY] MODULE = GLITCHING\n",
+        "[THREAT] LEVEL = HIGH\n",
+        "> recovery_agent.status: ACTIVE\n",
+        "> MISSION CONTINUES: STAGE_02 = RAM_RUSH\n"
     },
     new string[]{
-        "BOOTING SYSTEM...\n",
-        "BIOS SUCCESSFULLY BOOTED\n",
-        "MEMORY STATUS: UPGRADED\n",
-        "DISPLAY MODULE: GLITCHING\n",
-        "THREAT LEVEL: MEDIUM\n",
-        "> Good Job, Avatar. Reclaim the final components.\n",
-        "> NEXT STAGE: MONITOR MANEUVER.\n"
+        "[BOOT SEQUENCE INITIATED...]\n",
+        "[OK] BIOS.CHIP -> VERIFIED\n",
+        "[OK] MEMORY STATUS = UPGRADED\n",
+        "[DISPLAY] MODULE = GLITCHING\n",
+        "[THREAT] LEVEL = MEDIUM\n",
+        "> recovery_agent.status: ACTIVE\n",
+        "> FINAL PUSH: STAGE_03 = MONITOR_MANEUVER\n"
     },
     new string[]{
-        "BOOTING SYSTEM...\n",
-        "SYSTEM ERROR: BIOS CHIP MISSING\n",
-        "MEMORY STATUS: UPGRADED\n",
-        "DISPLAY MODULE: FIXED\n",
-        "THREAT LEVEL: LOW\n",
-        "> Congratulations, Avatar. You have successfully reclaimed all components.\n",
-        "> System Recovery Complete.\n",
-        }};
+        "[BOOT SEQUENCE INITIATED...]\n",
+        "[ERROR] BIOS.CHIP -> UNVERIFIED (EXPECTED)\n",
+        "[OK] MEMORY STATUS = UPGRADED\n",
+        "[OK] DISPLAY MODULE = ONLINE\n",
+        "[THREAT] LEVEL = LOW\n",
+        "> recovery_agent.status: COMPLETE\n",
+        "> SYSTEM RESTORED. ALL COMPONENTS RECOVERED.\n"
+    }};
+
 
     void Start()
     {

@@ -1612,6 +1612,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2722154615049982333, guid: 744f317bba21e1041babca2f13519ed2, type: 3}
+      propertyPath: canMove
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722154615049982333, guid: 744f317bba21e1041babca2f13519ed2, type: 3}
       propertyPath: jumpForce
       value: 5
       objectReference: {fileID: 0}

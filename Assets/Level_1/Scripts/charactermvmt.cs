@@ -25,14 +25,14 @@ public class charactermvmt : MonoBehaviour
         soundController = GameObject.FindGameObjectWithTag("sound").GetComponent<SoundController>();
     }
 
-    void Update()
+    async void Update()
     {
         
         if(isAlive){
             // Kill the player if they fall out of bounds
             if (transform.position.y < -7)
             {
-                Die();
+                await Die();
             }
 
 

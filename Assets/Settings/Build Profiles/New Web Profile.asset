@@ -23,7 +23,7 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/menu.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/select_character.unity
+    m_path: Assets/Scenes/cutscene 1.unity
   - m_enabled: 1
     m_path: Assets/Scenes/level_menu.unity
   - m_enabled: 1

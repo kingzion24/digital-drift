@@ -1254,6 +1254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEndless: 0
+  cutscene: 0
 --- !u!4 &678857733
 Transform:
   m_ObjectHideFlags: 0
@@ -3967,6 +3968,7 @@ MonoBehaviour:
   pauseScreen: {fileID: 579581079}
   instructionScreen: {fileID: 1306635538}
   controlsScreen: {fileID: 1890437751}
+  cameraShakeController: {fileID: 2031956882}
   targetText: {fileID: 989178611}
   player: {fileID: 0}
   targetScore: 10
@@ -3999,6 +4001,7 @@ GameObject:
   - component: {fileID: 2031956879}
   - component: {fileID: 2031956878}
   - component: {fileID: 2031956881}
+  - component: {fileID: 2031956882}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4124,6 +4127,28 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &2031956882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031956877}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55ce596a68afac4184ae86a175fc6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseShakeInterval: 2
+  minShakeInterval: 0.5
+  shakeGrowthRate: 0.05
+  baseShakeMagnitude: 0.01
+  maxShakeMagnitude: 0.1
+  magnitudeIncreaseRate: 0.01
+  baseDuration: 0.5
+  maxDuration: 1
+  strongJoltProbability: 0.2
+  strongJoltMultiplier: 1.5
 --- !u!1 &2068510424
 GameObject:
   m_ObjectHideFlags: 0

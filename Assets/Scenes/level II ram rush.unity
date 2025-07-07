@@ -657,6 +657,7 @@ MonoBehaviour:
   pauseScreen: {fileID: 88730580}
   instructionScreen: {fileID: 1974206064}
   controlsScreen: {fileID: 296662468}
+  cameraShakeController: {fileID: 0}
   targetText: {fileID: 1212937926}
   player: {fileID: 0}
   targetScore: 40
@@ -1620,6 +1621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEndless: 0
+  cutscene: 0
 --- !u!4 &682985513
 Transform:
   m_ObjectHideFlags: 0
@@ -1728,6 +1730,7 @@ GameObject:
   - component: {fileID: 726085565}
   - component: {fileID: 726085568}
   - component: {fileID: 726085569}
+  - component: {fileID: 726085570}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1867,6 +1870,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 951264436}
   smoothing: 5
+--- !u!114 &726085570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726085564}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e3c40103a2c95459b714800ce2bdc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startGlitchInterval: 2
+  minGlitchInterval: 0.5
+  intervalDecreaseRate: 0.05
+  minGlitchMagnitude: 0.05
+  maxGlitchMagnitude: 0.15
+  minGlitchDuration: 0.05
+  maxGlitchDuration: 0.3
+  glitchColors:
+  - {r: 0.12941177, g: 0.37647063, b: 0.20784315, a: 0}
+  - {r: 0.8705883, g: 0.86666673, b: 0.86666673, a: 0}
+  - {r: 0.19215688, g: 0.3019608, b: 0.47058827, a: 0}
+  maxFlickerOpacity: 0.35
 --- !u!1 &733821449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,7 +3191,7 @@ MonoBehaviour:
   - -5
   - -3
   - -1
-  sequenceLength: 10
+  sequenceLength: 7
   prevIndex: 1
 --- !u!4 &1255711018
 Transform:
@@ -3645,7 +3672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveRate: 1
-  acceleration: 0.5
+  acceleration: 0.8
   maxSpeed: 4.7
   logic: {fileID: 0}
 --- !u!95 &1566917067
