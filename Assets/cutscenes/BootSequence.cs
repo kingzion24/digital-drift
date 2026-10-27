@@ -67,11 +67,11 @@ public class BootSequence : MonoBehaviour
         scene = mode.cutscene; // Get the current scene index from the mode controller
         soundController = GameObject.FindGameObjectWithTag("sound").GetComponent<SoundController>();
         
-        if(scene ==3){
-            soundController.playBackgroundMusic(5);
-        }else{
-            soundController.playBackgroundMusic(4);
-        }
+        // if(scene ==3){
+            // soundController.playBackgroundMusic(5);
+        // }else{
+        soundController.playBackgroundMusic(4);
+        // }
          // Play booting background music
         
         // Validate if the text field is assigned
@@ -115,6 +115,6 @@ public class BootSequence : MonoBehaviour
         SceneManager.LoadScene(5+scene); // Replace with your actual level name
     }
     public void loadMenu(){
-        SceneManager.LoadScene(0); // Replace with your actual level name
+        SceneManager.LoadScene(8); // Replace with your actual level name
     }
 }

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/level I bios.unity
     guid: 30f345cac6377834fa783a8f9a63ee17
   - enabled: 1
-    path: Assets/Scenes/settings.unity
+    path: Assets/Scenes/brokenboot.unity
     guid: 83f7c35d1d509444d95f07791e2cdafc
   - enabled: 1
     path: Assets/Scenes/credit.unity

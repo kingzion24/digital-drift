@@ -20,6 +20,7 @@ public class LogicScript : MonoBehaviour
     public bool isEndless = false; // Flag to indicate if the game is endless
     public int level;
     private string highScoreKey ="";
+    public PlatformSpawner[] spawners = new PlatformSpawner[2]; // Array of platform spawners
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class LogicScript : MonoBehaviour
         {
             startEndless();
         }
+        scoreText.text = "Score: " + playerScore.ToString();
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<charactermvmt>();
         soundController = GameObject.FindGameObjectWithTag("sound").GetComponent<SoundController>();
@@ -106,6 +108,10 @@ public class LogicScript : MonoBehaviour
     
     public void addScore(int points)
     {
+        if(player.isAlive == false)
+        {
+            return; // Prevent score addition if player is not alive
+        }
         playerScore += points;
         scoreText.text = "Score: " + playerScore.ToString();
 
@@ -160,8 +166,19 @@ public class LogicScript : MonoBehaviour
             Debug.Log("Game Over Started");
             soundController.stopBackgroundMusic();
             gameOverScreen.SetActive(true);
+            if(spawners != null || spawners.Length != 0)
+            {
+                foreach (PlatformSpawner spawner in spawners)
+                {
+                    if (spawner != null)
+                    {
+                        spawner.StopSpawning(); // Stop all platform spawners
+
+                    }
+                }
+            }
+            
             await player.Die();
-            // await Task.Delay(2000); // Wait for 5 second before showing game over
             Time.timeScale = 0;
             Debug.Log("Game Over");
         }
