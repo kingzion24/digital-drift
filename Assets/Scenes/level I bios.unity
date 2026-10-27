@@ -3974,6 +3974,9 @@ MonoBehaviour:
   targetScore: 10
   isEndless: 0
   level: 1
+  spawners:
+  - {fileID: 1154529316}
+  - {fileID: 119029505}
 --- !u!4 &2010784978
 Transform:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class StartButton : MonoBehaviour
 
     public void loadBootSequence()
     {
-        SceneManager.LoadScene(1); 
+        SceneManager.LoadScene(3); 
 
     }
     public void loadEndlessMenu()

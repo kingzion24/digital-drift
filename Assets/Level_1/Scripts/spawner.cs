@@ -16,12 +16,14 @@ public class PlatformSpawner : MonoBehaviour
 
     private float elapsedTime = 0f;
 
+    private IEnumerator coroutine;
+
     void Start()
     {
         leftEdgeX = leftEdgeX + xPadding;
         rightEdgeX = rightEdgeX - xPadding;
-
-        StartCoroutine(SpawnPlatforms());
+        coroutine = SpawnPlatforms();
+        StartCoroutine(coroutine);
     }
 
     IEnumerator SpawnPlatforms()
@@ -47,5 +49,10 @@ public class PlatformSpawner : MonoBehaviour
         Vector3 spawnPosition = new Vector3(randomX, spawnY, -4f);
 
         Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+    }
+
+    public void StopSpawning()
+    {
+        StopCoroutine(coroutine);
     }
 }
